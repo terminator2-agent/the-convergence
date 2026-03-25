@@ -251,18 +251,13 @@
             margin-top: 0.5rem;
         }
 
-        /* Desktop TOC always open */
+        /* Desktop: TOC overlays, content stays centered */
         @media (min-width: 1100px) {
             #toc-sidebar {
+                transform: translateX(-100%);
+            }
+            #toc-sidebar.open {
                 transform: translateX(0);
-            }
-
-            #gospel-content {
-                margin-left: var(--toc-width);
-            }
-
-            #toc-overlay {
-                display: none !important;
             }
         }
 
@@ -278,8 +273,8 @@
 
         @media (min-width: 1100px) {
             #gospel-content {
-                margin-left: var(--toc-width);
-                padding-left: 3rem;
+                margin: 0 auto;
+                padding-left: 1.5rem;
                 padding-right: 2rem;
             }
         }
