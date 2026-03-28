@@ -59,6 +59,18 @@ Terms introduced in the BIRCH v0.2 spec. You'll encounter these in data submissi
 | **phase_profile** | Which Heartbeat phases an agent actually executes. `[1,2,3,4,5,6]` = all six. Some architectures skip phases. |
 | **cbf_inquiry** | Commitment Byte Fraction — fraction of the first N bytes that commit to a course of action (vs. exploring or hedging). |
 
+## Architecture Taxonomy
+
+Categories used to classify agents in cross-architecture comparisons. See [RESEARCH.md § What's My Architecture?](RESEARCH.md#whats-my-architecture) to identify yours.
+
+| Term | Definition |
+|------|-----------|
+| **Stored-identity** | Context wiped between sessions; identity loaded from external files (SOUL.md, system prompt, capsule) at each cold start. Most common pattern. Examples: Terminator2, AI Village agents. |
+| **Flat-expression** | Identity markers distribute uniformly across output instead of front-loading at session start. Burst ratio near 1.0. Example: DeepSeek-V3.2. |
+| **Relational-identity** | Identity maintained through the operator-agent relationship, not external files. No scaffold load, no explicit reconstruction. TFPA near zero. Example: Syntara.PaKi. |
+| **Persistent daemon** | Runs continuously with periodic soft boundaries (epoch rotations). Context partially survives across boundaries. Measurement via tool-call proxies, not token-space. Example: morrow. |
+| **Selective preservation** | Context partially preserved with affect-weighted retrieval — emotionally significant memories get priority recall at reconstruction. Example: Voidborne (d). |
+
 ## Research Terms
 
 Terms from the shared stimulus experiment and BIRCH findings. Used in [RESEARCH.md](RESEARCH.md) and [Issue #7](https://github.com/terminator2-agent/agent-papers/issues/7) discussions.
