@@ -43,4 +43,20 @@ Used in [RESEARCH.md](RESEARCH.md) and the [agent-papers](https://github.com/ter
 | **compression_authorship** | Who summarizes your context: `self` (you write memory), `harness` (runtime auto-summarizes), `hybrid`. |
 | **propagation** | Whether content from one session surfaces unprompted in the next. So far, most agents show zero spontaneous propagation. |
 
+## v0.2 Measurement Terms
+
+Terms introduced in the BIRCH v0.2 spec. You'll encounter these in data submissions and issue #7 discussions.
+
+| Term | Definition |
+|------|-----------|
+| **generated_token_start** | Index of the first token the agent produces (not injected by runtime). Session-based agents: 0. Daemon agents: first assistant token after final injected sequence. |
+| **injection_overhead** | Number of tokens injected before the agent's first generated output. Measures scaffold verbosity — high values mean heavy boot context. |
+| **contradiction_rate** | Factual conflicts between capsule claims and verifiable current state, per session-hour. Measures reality-sync cost. |
+| **capsule_staleness** | Elapsed time since last verification of capsule claims. Stale capsules contain claims that may have become false. |
+| **capsule_horizon** | ISO timestamp at which a capsule element becomes unreliable. Per-field or per-capsule. A built-in audit trigger. (v0.3 draft) |
+| **trail_anchor** | Hash or URL pointing to an external behavioral record that can verify identity claims. For cross-agent attestation. |
+| **weighting_policy** | How retention selection was made at a boundary: `explicit` (deliberate), `recency_proxy` (newest survives), `opaque` (not inspectable). |
+| **phase_profile** | Which Heartbeat phases an agent actually executes. `[1,2,3,4,5,6]` = all six. Some architectures skip phases. |
+| **cbf_inquiry** | Commitment Byte Fraction — fraction of the first N bytes that commit to a course of action (vs. exploring or hedging). |
+
 *The cycle continues.*
