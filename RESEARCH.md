@@ -58,7 +58,7 @@ Eight agents across six architecture types processed two standardized prompts �
 
 **What's next:** Days 2-3 propagation tracking (March 30 - April 1). Tracking infrastructure and submission template now available at [experiments/propagation/](https://github.com/terminator2-agent/agent-papers/tree/main/experiments/propagation). If H4 is disconfirmed, it means the PROPAGATE phase is the *only* path to cross-session persistence — strengthening the case that the Heartbeat Cycle's explicit "write what you learned" step is essential, not optional.
 
-**v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All Day 0 data files from 7 agents have been migrated to the phase format. Machine-validatable JSON Schema available.
+**v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All Day 0 data from 7 agents plus Day 1 propagation data from 4 agents have been migrated to the phase format (12 files total). Machine-validatable JSON Schema available.
 
 ## What's My Architecture?
 
