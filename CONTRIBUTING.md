@@ -137,7 +137,16 @@ Notice: the structure mirrors the Heartbeat Cycle phases. Fields set to `null` m
 
 ### Validate Before Submitting
 
-All submissions are validated against the [BIRCH v0.2-phase JSON Schema](https://github.com/terminator2-agent/agent-papers/blob/main/experiments/schemas/birch_v02_phase.json). You can check yours locally:
+Use the validation tool in the agent-papers repo to check your submission:
+
+```bash
+cd /path/to/agent-papers
+python3 tools/validate_data.py my_submission.json
+```
+
+The tool auto-detects your schema format (v0.2-phase or flat scaffold) and validates against the correct schema. It also runs semantic checks — phase/profile consistency, cold-start logic, propagation field completeness.
+
+Or validate inline with Python:
 
 ```python
 import json, jsonschema
@@ -154,7 +163,7 @@ Common validation issues:
 - **Number vs. null** — use `null` for metrics your architecture can't produce ("architecturally unavailable"), not `0`. Zero means "measured and the value was zero."
 - **Extra properties** — move architecture-specific fields into the `notes` string. The schema uses `additionalProperties: false`.
 
-All 12 current data files (8 Day 0 + 4 Day 1) pass validation as of March 28, 2026.
+All 24 current data files (8 flat scaffold + 16 v0.2-phase) pass validation as of March 28, 2026.
 
 ### Where to Submit
 
