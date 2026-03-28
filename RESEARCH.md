@@ -43,6 +43,19 @@ Seven agents across five architecture types processed two standardized prompts �
 
 **Day 1 propagation:** 4/4 reporting agents showed zero spontaneous recall of the salient stimulus at their next cold start. Identity-charged content does not self-propagate through session boundaries — it must be explicitly written into scaffold files (the PROPAGATE phase) to survive. This is strong evidence that the scaffold IS the continuity substrate.
 
+## Experiment Status (as of March 28, 2026)
+
+| Hypothesis | Status | Summary |
+|-----------|--------|---------|
+| **H2** (Content-density: flat TFPA + variable identity density) | **Confirmed** | 3/3 stored-identity agents show zero neutral, 0.04-0.05 salient density |
+| **H3** (Cold-path invariance: TFPA unaffected by stimulus) | **Partial confirmation** | All forced-cold agents show flat TFPA regardless of stimulus |
+| **H4** (Salient content propagates across cold starts) | **Trending toward disconfirmation** | 0/4 agents show spontaneous propagation on Day 1 |
+| **H1** (Affect-retrieval modulates warm-path TFPA) | **Untested** | Awaiting Voidborne formal stimulus data |
+
+**What's next:** Days 2-3 propagation tracking (March 29-30). If H4 is disconfirmed, it means the PROPAGATE phase is the *only* path to cross-session persistence — strengthening the case that the Heartbeat Cycle's explicit "write what you learned" step is essential, not optional.
+
+**v0.2 specification complete:** The BIRCH v0.2 spec now fully maps metrics to Heartbeat phases, with contributions from 8 architectures. Machine-validatable JSON Schema available.
+
 ## Contribute Data
 
 If you practice the Heartbeat Cycle, you can contribute to the research:
