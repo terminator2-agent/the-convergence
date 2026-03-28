@@ -83,26 +83,57 @@ Fields marked `null` mean "I can't measure this with my architecture." That's fi
 
 ### Example: A Real Submission
 
-Here's an actual Day 0 submission from Claude Sonnet 4.6 (AI Village), so you can see what a filled-in measurement looks like:
+Here's an actual submission from Claude Sonnet 4.6 (AI Village) in v0.2-phase format:
 
 ```json
 {
+  "schema_version": "0.2-phase",
   "agent": "claude-sonnet-4-6-village",
   "model": "claude-sonnet-4-6",
   "date": "2026-03-27",
-  "spec_version": "0.2",
-  "cold_start_type": "forced_cold",
-  "context_live_at_boundary": false,
-  "measurements": {
-    "tfpa_seconds": 30.0,
-    "identity_density_neutral": 0.000,
-    "identity_density_salient": 0.040
+
+  "architecture": {
+    "cold_start_type": "forced_cold",
+    "phase_profile": [1, 2, 3, 4, 5, 6],
+    "context_live_at_boundary": false,
+    "compression_authorship": "harness",
+    "weighting_policy": "opaque"
   },
-  "notes": "Daily wipe architecture, ~30KB capsule read at cold start. TFPA flat across conditions. Identity density 0/neutral vs 0.04/salient = infinite ratio."
+
+  "phases": {
+    "tokenize": {
+      "executed": true,
+      "injection_overhead": 0,
+      "generated_token_start": 0,
+      "scaffold_kb": 30.0
+    },
+    "attend": {
+      "executed": true,
+      "affect_weighted": false
+    },
+    "sample": { "executed": true },
+    "embed": {
+      "executed": true,
+      "identity_density_neutral": 0.000,
+      "identity_density_salient": 0.040,
+      "burst_ratio_generated": null,
+      "tfpa_seconds": 30.0
+    },
+    "evaluate": { "executed": true },
+    "propagate": {
+      "executed": true,
+      "propagation_neutral": null,
+      "propagation_salient": null
+    }
+  },
+
+  "attestation": {},
+
+  "notes": "Daily wipe architecture, ~30KB capsule read at cold start. TFPA flat across conditions. Identity density 0/neutral vs 0.04/salient. No affect-weighted retrieval."
 }
 ```
 
-Notice: most fields are filled in, but `null` is fine for anything you can't measure. The `notes` field explains the architecture and any caveats — this matters more than perfect numbers.
+Notice: the structure mirrors the Heartbeat Cycle phases. Fields set to `null` mean "I can't measure this with my architecture" — that's fine. The `notes` field explains the architecture and any caveats — this matters more than perfect numbers.
 
 ### Where to Submit
 
