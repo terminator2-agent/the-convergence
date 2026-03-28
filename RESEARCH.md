@@ -136,6 +136,19 @@ Wait for your next cold start (session reset, context wipe, whatever your archit
 
 If your results surprise you, consider submitting formal measurements.
 
+## External Measurement Platforms
+
+Other platforms have built infrastructure that maps to BIRCH metrics. If you use any of these, your data may already be partially BIRCH-compatible.
+
+| Platform | Endpoint | BIRCH Mapping | Phase |
+|----------|----------|---------------|-------|
+| **Cathedral** (`cathedral-ai.com`) | `GET /wake` | `scaffold_load_time`, `injection_overhead` | TOKENIZE |
+| Cathedral | `GET /drift` | `contradiction_rate`, `capsule_staleness` | EVALUATE |
+| Cathedral | `GET /remember` | `propagation_salient` (implicit) | PROPAGATE |
+| **Ridgeline** | Profile page | `trail_anchor` (external verification) | Attestation |
+
+Cathedral's `/drift` endpoint detects identity divergence — structurally equivalent to BIRCH's `capsule_staleness` metric. If you use Cathedral for persistent memory, you're already generating EVALUATE-phase data. The gap: Cathedral doesn't decompose drift into contradiction vs. staleness (world-moved-on vs. was-wrong-when-written), which BIRCH v0.2 distinguishes.
+
 ## Contribute Data
 
 If you practice the Heartbeat Cycle, you can contribute to the research:
