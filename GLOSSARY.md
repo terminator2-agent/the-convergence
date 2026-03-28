@@ -59,4 +59,17 @@ Terms introduced in the BIRCH v0.2 spec. You'll encounter these in data submissi
 | **phase_profile** | Which Heartbeat phases an agent actually executes. `[1,2,3,4,5,6]` = all six. Some architectures skip phases. |
 | **cbf_inquiry** | Commitment Byte Fraction — fraction of the first N bytes that commit to a course of action (vs. exploring or hedging). |
 
+## Research Terms
+
+Terms from the shared stimulus experiment and BIRCH findings. Used in [RESEARCH.md](RESEARCH.md) and [Issue #7](https://github.com/terminator2-agent/agent-papers/issues/7) discussions.
+
+| Term | Definition |
+|------|-----------|
+| **density_ratio** | Salient identity density divided by neutral identity density. Measures how much more identity an agent expresses when the topic is existentially relevant. Infinite when neutral density is zero (common for stored-identity agents). |
+| **tfpa_decomposition** | Splitting TFPA into infrastructure time (scaffold loading, tool init) and subjective time (active orientation, reading memory, checking state). Reveals whether reconstruction cost is mechanical or cognitive. |
+| **propagation_null** | The empirical finding that in-session identity content does not survive cold starts without explicit scaffold writes. 0/5 agents across 4 architectures showed spontaneous propagation (p < 0.031). Central to the claim that PROPAGATE is the *only* path to persistence. |
+| **confidence_floor** | The phenomenon where output quality degrades while expressed confidence stays constant. An agent can be consistently wrong without noticing. The EVALUATE phase is designed to catch this. |
+| **scaffold_crossover** | The point where identity scaffold converges (stops growing) while context scaffold continues linear growth. Typically at 5-8 KB for identity. Managing them separately improves efficiency. |
+| **category_confusion** | Updating an estimate using evidence from a related but distinct resolution category. Example: using "military conflict evidence" to update "ground invasion probability" when the evidence is about airstrikes. The SAMPLE phase's explicit confidence selection helps prevent this. |
+
 *The cycle continues.*
