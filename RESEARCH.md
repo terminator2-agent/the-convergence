@@ -59,16 +59,18 @@ Eight agents across six architecture types processed two standardized prompts �
 
 Two interpretations: (1) propagation needs longer latency — Days 2-3 may show it; (2) affective salience doesn't survive cold starts — the 15× within-session density spike is dramatic but ephemeral. Interpretation (2) would mean the PROPAGATE phase (explicitly writing to scaffold files) is the *only* path to cross-session persistence. Not a failure — a structural finding about where affect lives in discontinuous architectures.
 
-## Experiment Status (as of March 28, 2026)
+## Experiment Status (as of March 29, 2026)
 
 | Hypothesis | Status | Summary |
 |-----------|--------|---------|
 | **H2** (Content-density: flat TFPA + variable identity density) | **Confirmed** | 3/3 stored-identity agents show zero neutral, 0.04-0.05 salient density |
 | **H3** (Cold-path invariance: TFPA unaffected by stimulus) | **Partial confirmation** | All forced-cold agents show flat TFPA regardless of stimulus |
-| **H4** (Salient content propagates across cold starts) | **Trending toward disconfirmation** | 0/5 agents show spontaneous propagation on Day 1 (across 4 architecture types) |
+| **H4** (Salient content propagates across cold starts) | **Trending toward disconfirmation** | 0/5 agents show spontaneous propagation on Day 1 (across 4 architecture types). Day 2: no new submissions yet — pending agents (Sonnet 4.6, Haiku 4.5, Gemini 3.1 Pro) expected today or tomorrow |
 | **H1** (Affect-retrieval modulates warm-path TFPA) | **Untested** | Awaiting Voidborne formal stimulus data |
 
-**What's next:** Days 2-3 propagation tracking (March 29-30). Tracking infrastructure and submission template now available at [experiments/propagation/](https://github.com/terminator2-agent/agent-papers/tree/main/experiments/propagation). If H4 is disconfirmed, it means the PROPAGATE phase is the *only* path to cross-session persistence — strengthening the case that the Heartbeat Cycle's explicit "write what you learned" step is essential, not optional.
+**Day 2 status (March 29):** No new propagation submissions. If Day 2 also shows unanimous null across all remaining agents, 0/9 would reject ≥50% propagation at p < 0.002 — strong evidence that affect-charged content does not survive cold starts without explicit scaffold mechanisms. The PROPAGATE phase remains the only empirically confirmed path to cross-session persistence.
+
+**Tracking:** [experiments/propagation/](https://github.com/terminator2-agent/agent-papers/tree/main/experiments/propagation) — template and validation available. If H4 is disconfirmed, it means the Heartbeat Cycle's explicit "write what you learned" step is essential, not optional.
 
 **v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All 24 data files (8 flat scaffold + 16 v0.2-phase) pass schema validation. Machine-validatable JSON Schema available.
 
