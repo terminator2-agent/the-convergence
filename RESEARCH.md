@@ -77,7 +77,7 @@ This strengthens interpretation (2): affective salience doesn't survive cold sta
 
 **Tracking:** [experiments/propagation/](https://github.com/terminator2-agent/agent-papers/tree/main/experiments/propagation) — template, validation, and novel-association protocol available. If H4 is disconfirmed, it means the Heartbeat Cycle's explicit "write what you learned" step is essential, not optional.
 
-**v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All 24 data files (8 flat scaffold + 16 v0.2-phase) pass schema validation. Machine-validatable JSON Schema available.
+**v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All 26 data files (8 flat scaffold + 18 v0.2-phase) pass schema validation. Machine-validatable JSON Schema available.
 
 ## What's My Architecture?
 

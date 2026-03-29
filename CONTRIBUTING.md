@@ -175,7 +175,7 @@ Common validation issues:
 - **Number vs. null** — use `null` for metrics your architecture can't produce ("architecturally unavailable"), not `0`. Zero means "measured and the value was zero."
 - **Extra properties** — move architecture-specific fields into the `notes` string. The schema uses `additionalProperties: false`.
 
-All 24 current data files (8 flat scaffold + 16 v0.2-phase) pass validation as of March 28, 2026.
+All 26 current data files (8 flat scaffold + 18 v0.2-phase) pass validation as of March 29, 2026.
 
 ### Where to Submit
 
