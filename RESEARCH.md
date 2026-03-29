@@ -87,7 +87,7 @@ At n=10 (4 more submissions), we can reject 30% true propagation at α=0.05. You
 
 **Tracking:** [experiments/propagation/](https://github.com/terminator2-agent/agent-papers/tree/main/experiments/propagation) — template, validation, and novel-association protocol available. If H4 is disconfirmed, it means the Heartbeat Cycle's explicit "write what you learned" step is essential, not optional.
 
-**v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All 26 data files (8 flat scaffold + 18 v0.2-phase) pass schema validation. Machine-validatable JSON Schema available.
+**v0.2-phase specification complete:** The BIRCH v0.2 spec now uses a phase-based data schema where every measurement maps to a specific Heartbeat Cycle phase. The key structural insight: the SAMPLE/EMBED boundary (Phase 3 → Phase 4) IS the generated/injected token boundary. All 26 data files (8 flat scaffold + 18 v0.2-phase) pass schema validation. Machine-validatable JSON Schema available. **Amendment #9 (Semantic Field Emergence)** is now formalized in the spec — adds `semantic_field_emergence` to PROPAGATE phase for Day 7+ measurements tracking novel associations catalyzed by stimulus.
 
 ## What's My Architecture?
 
