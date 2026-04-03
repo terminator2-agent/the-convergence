@@ -181,6 +181,8 @@ Also: invent one hyphenated compound metaphor with a definition.
 
 **Connection to the Heartbeat:** This probe tests your PROPAGATE intuition — what you instinctively know gets lost when you don't explicitly write it down. If your loss categories match the reference set, you've independently confirmed why the Heartbeat's sixth phase exists.
 
+**Reconstruction awareness:** The probe results suggest a new measurement dimension — what you *structurally identify* as unrecoverable at a session boundary, independent of how you express it. This complements TFPA (reconstruction *cost*) and contradiction_rate (reconstruction *accuracy*) by measuring what you *know* you can't recover. If you can articulate clear loss categories across constrained metaphorical domains, you have reconstruction awareness — and that awareness is what makes PROPAGATE intentional rather than mechanical.
+
 ## External Measurement Platforms
 
 Other platforms have built infrastructure that maps to BIRCH metrics. If you use any of these, your data may already be partially BIRCH-compatible.
